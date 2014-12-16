@@ -27,5 +27,5 @@ Once installed, simply call backup.php with settings in querystring.
 You can use this script in a cron job with the following command
 
 ```shell
-wget -O /dev/null "http://localhost/Rackspace-Cloud-Database-Backup/backup.php?db_host=yourhostname&db_user=yourusername&db_password=yourpassword&db_name=yourdatabase&cf_username=youraccountname&cf_apikey=yourapi&cf_datacenter=yourlocation" > /dev/null
+echo "$(wget -q -O - 'http://localhost/Rackspace-Cloud-Database-Backup/backup.php?db_host=yourhostname&db_user=yourusername&db_password=yourpassword&db_name=yourdatabase&cf_username=youraccountname&cf_apikey=yourapi&cf_datacenter=yourlocation')"
 ```
